@@ -4,6 +4,7 @@
 #include "CommndDP/new_command.h"
 #include "CommndDP/receiver.h"
 
+
 int main() {
 
     /*Receiver rec;
@@ -11,36 +12,33 @@ int main() {
     Invoker inv(c);
     inv.operation();*/
 
-    //phase 1
-    DnaSequence dnaSequence("ACGTA");
-    std::string a = "AACTT";
-    DnaSequence seq(a);
-    std::cout << dnaSequence << std::endl;
-    std::cout << seq << std::endl;
-    DnaSequence seq2("AA");
-    seq = seq2;
-    std::cout << seq << std::endl;
-    seq = "ACCCCC";
-    std::cout << seq << std::endl;
-    seq2 = std::string("CACGTACGTAAACCTTACGT");
-    std::cout << seq2 << std::endl;
-    std::cout << (seq == seq2) << std::endl;
+    while(true) {
+        std::string input;
+        std::cout << "DnaAnalyzer >> ";
+        std::getline(std::cin, input);
 
-    // phase 2
-    DnaSequence mySeq = DnaOperations::getSubSequence(0,5, dnaSequence);
-    std::cout << mySeq << std::endl;
-    mySeq = DnaOperations::getPairedDna(mySeq);
-    std::cout << mySeq << std::endl;
-    std::cout << DnaOperations::findSubSequence(mySeq, "CGT") << std::endl; // TACGT
-    std::cout << DnaOperations::countSubSequence(mySeq, "T") << std::endl; // TACGT
-    std::vector<size_t> v = DnaOperations::findAllSubSequence(seq2, "ACGT");
-    for (size_t i = 0 ; i < v.size() ; i++){
-        std::cout << v[i] << " ";
-    }
-    DnaSequence s("ATGTTTCCCTACTAAATGGGGGGGGGGTGA");
-    std::vector<DnaSequence> v2 = DnaOperations::findConsensusSequence(s);
-    for (size_t i = 0 ; i < v2.size() ; i++){
-        std::cout << v2[i] << " ";
+        std::istringstream iss(input);
+        std::vector<std::string> results((std::istream_iterator<std::string>(iss)),
+                                         std::istream_iterator<std::string>());
+        if (results[0] == "quit"){
+            break;
+        }
+
+        if (results[0] == "new") {
+
+        }
+        else if (results[0] == "dup") {
+
+        }
+        else if (results[0] == "load") {
+
+        }
+        else if(results[0] == "slice"){
+
+        }
+        else if(results[0] == "replace"){
+
+        }
     }
     return 0;
 }
