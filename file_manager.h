@@ -9,8 +9,14 @@
 #include <string>
 
 class FileManager {
-    static void write_to_file(const char* fileName, const char* data);
-    static std::string read_from_file(const char* fileName);
+
+public:
+    static void write_to_file(const std::string& fileName, const std::string& data);
+    static std::string read_from_file(const std::string& fileName);
+
+private:
+    static const std::string prefix;
+
 };
 
 

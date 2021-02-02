@@ -6,10 +6,16 @@
 #define UNTITLED30_RECEIVER_H
 
 
+#include <string>
+#include "../file_manager.h"
+
 class Receiver {
 
 public:
-    void action();
+    void newAction(const std::string& sequence,const std::string& name);
+    void loadAction(const std::string& name);
+    void duplicateAction(const std::string& name, const std::string& secondName);
+    void sliceAction(const std::string& name, int startIndex, int endIndex, const std::string& secondName);
 };
 
 

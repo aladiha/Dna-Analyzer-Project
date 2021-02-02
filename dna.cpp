@@ -103,7 +103,6 @@ DnaSequence::DnaSequence(const std::string& mySequence) {
             default:
                 throw std::invalid_argument("invalid DNA base");
         }
-        shift = (shift == 0) ? 6 : shift - 2;
     }
 }
 
@@ -155,7 +154,6 @@ DnaSequence& DnaSequence::operator=(const std::string& mySequence) {
             default:
                 throw std::invalid_argument("invalid DNA base");
         }
-        shift = (shift == 0) ? 6 : shift - 2;
     }
     return *this;
 }
@@ -188,7 +186,6 @@ DnaSequence& DnaSequence::operator=(const char* mySequence) {
             default:
                 throw std::invalid_argument("invalid DNA base");
         }
-        shift = (shift == 0) ? 6 : shift - 2;
     }
     return *this;
 }

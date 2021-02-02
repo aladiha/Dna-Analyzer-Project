@@ -12,8 +12,8 @@ DnaSequence DnaOperations::getSubSequence(size_t start, size_t end, const DnaSeq
             throw std::out_of_range("index out of range");
         }
     } catch (std::out_of_range& e) {
-        std::cout << e.what();
-        exit(0);
+        std::cout << e.what() << std::endl;
+        return DnaSequence("");
     }
     size_t i=0, newSize = end-start;
     char* newSeq = new char[newSize+1];

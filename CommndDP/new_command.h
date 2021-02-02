@@ -5,6 +5,8 @@
 #ifndef UNTITLED30_NEW_COMMAND_H
 #define UNTITLED30_NEW_COMMAND_H
 
+#include <string>
+#include <vector>
 #include "Command.h"
 #include "receiver.h"
 
@@ -12,8 +14,8 @@ class NewCommand : public Command{
 
     public:
           explicit NewCommand(Receiver receiver);
-          void execute();
-
+          void execute(std::vector<std::string>& data);
+          ~NewCommand();
 private:
     Receiver receiver;
 
