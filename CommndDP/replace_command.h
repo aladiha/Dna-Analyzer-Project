@@ -6,9 +6,21 @@
 #define UNTITLED30_REPLACE_COMMAND_H
 
 
-class replace_command {
+#include <string>
+#include <vector>
+#include "Command.h"
+#include "receiver.h"
+
+class ReplaceCommand : public Command{
+
+public:
+    explicit ReplaceCommand(Receiver receiver);
+    void execute(std::vector<std::string>& data);
+    ~ReplaceCommand();
+
+private:
+    Receiver receiver;
 
 };
-
 
 #endif //UNTITLED30_REPLACE_COMMAND_H

@@ -32,3 +32,9 @@ std::string FileManager::read_from_file(const std::string& fileName) {
         return "";
     }
 }
+
+void FileManager::delete_file(const std::string& name) {
+    std::string path = prefix + name + ".txt";
+    char* str = &path[0];
+    remove(str);
+}

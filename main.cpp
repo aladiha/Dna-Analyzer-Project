@@ -6,6 +6,10 @@
 #include "CommndDP/load_command.h"
 #include "CommndDP/duplicate_command.h"
 #include "CommndDP/slice_command.h"
+#include "CommndDP/replace_command.h"
+#include "CommndDP/concat_command.h"
+#include "CommndDP/pair_command.h"
+#include "CommndDP/find_command.h"
 
 
 int main() {
@@ -52,6 +56,30 @@ int main() {
         }
         else if(results[0] == "replace"){
             Command* c = new ReplaceCommand(rec);
+            Invoker inv(c);
+            inv.operation(results);
+            delete c;
+        }
+        else if(results[0] == "concat"){
+            Command* c = new ConcatCommand(rec);
+            Invoker inv(c);
+            inv.operation(results);
+            delete c;
+        }
+        else if(results[0] == "pair"){
+            Command* c = new PairCommand(rec);
+            Invoker inv(c);
+            inv.operation(results);
+            delete c;
+        }
+        else if(results[0] == "find"){
+            Command* c = new FindCommand(rec);
+            Invoker inv(c);
+            inv.operation(results);
+            delete c;
+        }
+        else if(results[0] == "count"){
+            Command* c = new PairCommand(rec);
             Invoker inv(c);
             inv.operation(results);
             delete c;

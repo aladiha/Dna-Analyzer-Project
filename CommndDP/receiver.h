@@ -16,6 +16,13 @@ public:
     void loadAction(const std::string& name);
     void duplicateAction(const std::string& name, const std::string& secondName);
     void sliceAction(const std::string& name, int startIndex, int endIndex, const std::string& secondName);
+    void replaceAction(const std::string& name, int index, const std::string& newLetter);
+
+    void concatAction(std::string &basicString, std::string &basicString1, std::string &basicString2);
+
+    void pairAction(std::string &basicString, std::string &basicString1);
+
+    void findAction(std::string &basicString, std::string &basicString1);
 };
 
 

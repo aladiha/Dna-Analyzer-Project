@@ -13,6 +13,7 @@ class FileManager {
 public:
     static void write_to_file(const std::string& fileName, const std::string& data);
     static std::string read_from_file(const std::string& fileName);
+    static void delete_file(const std::string &basicString);
 
 private:
     static const std::string prefix;

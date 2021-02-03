@@ -126,5 +126,6 @@ std::vector<DnaSequence> DnaOperations::findConsensusSequence(const DnaSequence&
             }
         }
     }
+
     return codonSeqs;
 }
