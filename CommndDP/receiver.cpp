@@ -3,7 +3,6 @@
 //
 
 #include <iostream>
-#include <cstring>
 #include "receiver.h"
 #include "../dna.h"
 #include "../operations.h"
@@ -107,7 +106,7 @@ void Receiver::findAction(const std::string &seqName,const std::string &subSeq) 
     }
     DnaSequence dna(sequence);
     int index = DnaOperations::findSubSequence(dna, subSeq);
-    std::cout << "sub sequence is located at index" << index << std::endl;
+    std::cout << "sub sequence is located at index " << index << std::endl;
 }
 
 void Receiver::countAction(const std::string &seqName,const std::string &subSeq) {

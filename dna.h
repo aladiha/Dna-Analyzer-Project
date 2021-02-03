@@ -36,7 +36,6 @@ public:
     char operator[](size_t index) const;
     size_t getSize() const;
 
-
 private:
     uint8_t* sequence;
     size_t size;

@@ -72,8 +72,6 @@ char* DnaSequence::to_string() const{
     return dna_str;
 }
 
-
-
 DnaSequence::DnaSequence(const std::string& mySequence) {
     size = mySequence.length();
 

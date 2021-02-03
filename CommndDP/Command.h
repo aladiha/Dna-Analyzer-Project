@@ -7,12 +7,11 @@
 
 
 class Command {
+
 public:
     virtual void execute(std::vector<std::string>& data) = 0;
     virtual ~Command(){};
+
 };
-
-
-
 
 #endif //UNTITLED30_COMMAND_H
