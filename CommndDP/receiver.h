@@ -9,6 +9,7 @@
 #include <string>
 #include "../file_manager.h"
 
+
 class Receiver {
 
 public:
@@ -17,12 +18,14 @@ public:
     void duplicateAction(const std::string& name, const std::string& secondName);
     void sliceAction(const std::string& name, int startIndex, int endIndex, const std::string& secondName);
     void replaceAction(const std::string& name, int index, const std::string& newLetter);
+    void concatAction(const std::string &basicString,const std::string &basicString1,const std::string &basicString2);
+    void pairAction(const std::string &basicString, const std::string &basicString1);
+    void findAction(const std::string &basicString,const std::string &basicString1);
+    void countAction(const std::string &basicString,const std::string &basicString1);
 
-    void concatAction(std::string &basicString, std::string &basicString1, std::string &basicString2);
+    void HelpAction();
 
-    void pairAction(std::string &basicString, std::string &basicString1);
-
-    void findAction(std::string &basicString, std::string &basicString1);
+    void listAction();
 };
 
 
